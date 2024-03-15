@@ -38,6 +38,7 @@ app.post('/api/appointments', async (req, res) => {
     doctor: req.body.doctor,
   });
 
+  
   try {
     const savedAppointment = await newAppointment.save();
     res.status(200).json(savedAppointment);
@@ -46,6 +47,3 @@ app.post('/api/appointments', async (req, res) => {
   }
 });
 
-// app.listen(5000, () => {
-//   console.log('Server is running on port 5000');
-// });
